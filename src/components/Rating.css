@@ -1,0 +1,10 @@
+.ratings .rating-stars {
+    display: inline-block;
+}
+
+.ratings .caption {
+    display: inline-block;
+    position: relative;
+    top: -10px;
+    margin: 0 8px;
+}
