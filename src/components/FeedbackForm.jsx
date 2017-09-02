@@ -29,6 +29,10 @@ class FeedbackForm extends React.Component {
     this.updateModel("moreExcited", rating);
   };
 
+  setBetter = (event) => {
+    this.updateModel("howToBeBetter", event.target.value);    
+  };
+
   setComment = (event) => {
     this.updateModel("comments", event.target.value);
   };
@@ -88,6 +92,11 @@ class FeedbackForm extends React.Component {
           <div className="form-group">
             <label>The presentation made me more excited about the use of containers</label>
             <Rating onSelection={this.setMoreExcited} toggledClass="text-warning" />
+          </div>
+          
+          <div className="form-group">
+            <label>How could the session have been better? <small className="text-muted">(optional)</small></label>
+            <textarea className="form-control" onChange={this.setBetter} />
           </div>
 
           <div className="form-group">
